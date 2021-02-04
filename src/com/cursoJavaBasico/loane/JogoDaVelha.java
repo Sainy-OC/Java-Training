@@ -1,3 +1,4 @@
+package com.cursoJavaBasico.loane;
 import java.util.Scanner;
 
 public class JogoDaVelha {
@@ -19,13 +20,13 @@ public class JogoDaVelha {
 		
 		tabuleiro.imprimirTabuleiro();
 		
-		while(!tabuleiro.getHaVencedor()){
+		while(!tabuleiro.isHaVencedor()){
 			
-			if(tabuleiro.getFimDeJogo()) {
+			if(tabuleiro.isFimDeJogo()) {
 				break;
 			}
 			
-			if(!tabuleiro.getHaVencedor()) {
+			if(!tabuleiro.isHaVencedor()) {
 				do {
 					do {
 						System.out.println(jogador1.getNome()+", Informe um par válido de coordenadas para o tabuleiro:");
@@ -38,11 +39,11 @@ public class JogoDaVelha {
 				tabuleiro.imprimirTabuleiro();
 			}
 
-			if(tabuleiro.getFimDeJogo()) {
+			if(tabuleiro.isFimDeJogo()) {
 				break;
 			}
 			
-			if(!tabuleiro.getHaVencedor()) {
+			if(!tabuleiro.isHaVencedor()) {
 				do {
 					do {
 						System.out.println(jogador2.getNome()+", Informe um par válido de coordenadas para o tabuleiro:");
@@ -56,10 +57,10 @@ public class JogoDaVelha {
 			}	
 		}
 		
-		if(tabuleiro.getHaVencedor()) {
+		if(tabuleiro.isHaVencedor()) {
 			System.out.println(tabuleiro.getVencedor().getNome()+" venceu o jogo.");
 		}else {
-			if(tabuleiro.getFimDeJogo()) {
+			if(tabuleiro.isFimDeJogo()) {
 				System.out.println("O JOGO TERMINOU EM EMPATE");				
 			}
 		}

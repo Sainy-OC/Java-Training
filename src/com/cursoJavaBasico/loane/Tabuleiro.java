@@ -1,3 +1,4 @@
+package com.cursoJavaBasico.loane;
 public class Tabuleiro {
 	private String[][] tabuleiro;
 	private Jogador vencedor;
@@ -12,7 +13,7 @@ public class Tabuleiro {
 		this.inicializarTabuleiro();
 	}
 
-	boolean getFimDeJogo() {
+	boolean isFimDeJogo() {
 		return this.fimDeJogo;
 	}
 	
@@ -20,7 +21,7 @@ public class Tabuleiro {
 		this.fimDeJogo=true;
 	}
 	
-	boolean getHaVencedor() {
+	boolean isHaVencedor() {
 		return this.haVencedor;
 	}
 	

@@ -1,3 +1,4 @@
+package com.cursoJavaBasico.loane;
 public class Jogador {
 
 		private String nome;
